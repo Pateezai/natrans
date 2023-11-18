@@ -1,0 +1,154 @@
+{
+  "origin": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "destination": [
+    "X",
+    "Y",
+    "Z",
+    "W"
+  ],
+  "dates": [
+    {
+      "date":"23-09-2023",
+      "data": [
+        {
+          "origin": "A",
+          "destination": "B",
+          "duration": "30min",
+          "available_seat":"10",
+          "fare":150,
+          "periods": [
+            {
+            "desc": "1",
+            "start_times": "07:00",
+            "end_times": "07:30"
+            },
+            {
+            "desc": "2",
+            "start_times": "08:00",
+            "end_times": "08:30"
+            },
+            {
+            "desc": "3",
+            "start_times": "09:00",
+            "end_times": "09:30"
+            }
+            ]
+        }
+      ]
+    },
+    {
+      "date":"24-09-2023",
+      "data": [
+        {
+          "start_location": "A",
+          "end_location": "B",
+          "duration": "30min",
+          "available_seat":"10",
+          "fare":150,
+          "periods": [
+            {
+            "desc": "1",
+            "start_time": "07:00",
+            "end_time": "07:30"
+            },
+            {
+            "desc": "2",
+            "start_time": "08:00",
+            "end_time": "08:30"
+            },
+            {
+            "desc": "3",
+            "start_time": "09:00",
+            "end_time": "09:30"
+            }
+            ]
+        }
+      ]
+    }
+  ]
+}
+
+
+{
+  "id": 1,
+  "date": "2023-09-24T00:00:00.000Z",
+  "duration": "30",
+  "available_seat": 10,
+  "fare": 150,
+  "start_location": "1",
+  "end_location": "2",
+  "periods": [
+    {
+    "desc": "1",
+    "start_time": "07:00",
+    "end_time": "07:30"
+    },
+    {
+    "desc": "2",
+    "start_time": "08:00",
+    "end_time": "08:30"
+    },
+    {
+    "desc": "3",
+    "start_time": "09:00",
+    "end_time": "09:30"
+    }
+    ]
+  },
+  {
+  "id": 2,
+  "date": "2023-09-25T00:00:00.000Z",
+  "duration": "30",
+  "available_seat": 10,
+  "fare": 150,
+  "start_location": "1",
+  "end_location": "2",
+  "periods": [
+    {
+    "desc": "1",
+    "start_time": "07:00",
+    "end_time": "07:30"
+    },
+    {
+    "desc": "2",
+    "start_time": "08:00",
+    "end_time": "08:30"
+    },
+    {
+    "desc": "3",
+    "start_time": "09:00",
+    "end_time": "09:30"
+    }
+    ]
+  },
+  {
+  "id": 3,
+  "date": "2023-09-26T00:00:00.000Z",
+  "duration": "30",
+  "available_seat": 10,
+  "fare": 150,
+  "start_location": "1",
+  "end_location": "2",
+  "periods": [
+    {
+    "desc": "1",
+    "start_time": "07:00",
+    "end_time": "07:30"
+    },
+    {
+    "desc": "2",
+    "start_time": "08:00",
+    "end_time": "08:30"
+    },
+    {
+    "desc": "3",
+    "start_time": "09:00",
+    "end_time": "09:30"
+    }
+    ]
+  }

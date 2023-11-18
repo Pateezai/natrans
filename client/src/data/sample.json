@@ -1,0 +1,98 @@
+{
+    "route": [
+      {
+        "from": "New York",
+        "to": "Los Angeles",
+        "date": "2023-09-10T12:00:00Z",
+        "fare": 350
+      },
+      {
+        "from": "Chicago",
+        "to": "Miami",
+        "date": "2023-09-15T14:30:00Z",
+        "fare": 280
+      },
+      {
+        "from": "San Francisco",
+        "to": "Denver",
+        "date": "2023-09-20T10:15:00Z",
+        "fare": 220
+      },
+      {
+        "from": "Boston",
+        "to": "Orlando",
+        "date": "2023-09-12T09:45:00Z",
+        "fare": 210
+      },
+      {
+        "from": "Las Vegas",
+        "to": "Phoenix",
+        "date": "2023-09-18T08:30:00Z",
+        "fare": 175
+      },
+      {
+        "from": "Chicago",
+        "to": "Miami",
+        "date": "2023-09-15T10:00:00Z",
+        "fare": 280,
+        "availableSeats": 100
+      },
+      {
+        "from": "Chicago",
+        "to": "Miami",
+        "date": "2023-09-15T11:30:00Z",
+        "fare": 280,
+        "availableSeats": 100
+      },
+      {
+        "from": "Chicago",
+        "to": "Miami",
+        "date": "2023-09-14T10:00:00Z",
+        "fare": 200,
+        "availableSeats": 100
+      },
+      {
+        "from": "Chicago",
+        "to": "Miami",
+        "date": "2023-09-13T11:30:00Z",
+        "fare": 200,
+        "availableSeats": 100
+      }
+      
+    ],
+    "path":[
+        {
+            "label": "Chicago",
+            "code": "CCG"
+        },
+        {
+            "label": "Las Vegas",
+            "code": "LVG"
+        },
+        {
+            "label": "Miami",
+            "code": "MAM"
+        },
+        {
+            "label": "Orlando",
+            "code": "OLN"
+        },
+        {
+            "label": "Denver",
+            "code": "DNV"
+        },
+        {
+            "label": "New York",
+            "code": "NYC"
+        },
+        {
+            "label": "San Francisco",
+            "code": "SFC"
+        },
+        {
+            "label": "Boston",
+            "code": "BST"
+        }
+    ]
+  }
+  

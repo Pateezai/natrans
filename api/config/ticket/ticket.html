@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    #ticket-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="ticket-container">
+
+    <div>
+      <h1 style="font-size: 1.5rem; font-weight: bold;">Natrans Ticket</h1>
+    </div>
+
+    <div style="border-radius: 0.375rem; overflow: hidden; border: 1px solid #AED2F9; min-width: max-content; max-width: max-content;">
+
+      <div style="background-color: #60A5FA; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center;">
+
+        <div style="font-size: 1rem; color: white;">
+          <h1 style="font-weight: bold;">Natrans</h1>
+        </div>
+
+        <div style="color: white; text-align: center;">
+          <p style="font-size: 0.75rem;">Reference ID</p>
+          <h1 style="font-weight: bold;">${ref_id}</h1>
+        </div>
+
+      </div>
+
+      <div style="padding: 0.5rem 1rem; border-bottom: 1px dashed #CBD5E0; display: flex;">
+
+        <div style="width: 100%; padding: 0 0.5rem;">
+
+          <div style="border-bottom: 1px solid #CBD5E0; padding-bottom: 0.5rem; display: flex; gap: 0.25rem; align-items: center;">
+
+            <h1 style="font-size: 1rem; font-weight: bold;">${from} ${start_time}</h1>
+            <h1 style="font-size: 1rem; font-weight: bold;">${to} ${end_time},</h1>
+            <h1 style="font-size: 1rem; font-weight: bold;">${depart_date}</h1>
+
+          </div>
+
+          <div style="padding: 0.5rem 0; display: flex; justify-content: space-between; gap: 0.25rem;">
+
+            <div style="flex-direction: column; gap: 0.25rem;">
+
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Name:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${p_name}</span>
+              </h1>
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Seat:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${seat}</span>
+              </h1>
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Email:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${email}</span>
+              </h1>
+
+            </div>
+
+            <div style="flex-direction: column; gap: 0.25rem;">
+
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Passport/ID:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${identnumber}</span>
+              </h1>
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Duration:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${duration}</span>
+              </h1>
+              <h1 style="font-size: 0.875rem; font-weight: bold;">Phone:
+                <span style="padding-left: 0.25rem; font-weight: normal;">${phone}</span>
+              </h1>
+
+            </div>
+
+          </div>
+
+          <div style="padding: 0.25rem 0;">
+
+            <h1 style="font-weight: bold;">Note:</h1>
+            <span style="padding-left: 0.25rem; font-weight: normal;">${note}</span>
+
+          </div>
+
+        </div>
+
+        <div style="width: max-content; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 0.5rem;">
+
+          <img src="your-qr-image-path" alt="" style="width: 2.5rem;"/>
+          <span style="font-size: 0.625rem;">Scan</span>
+
+        </div>
+
+      </div>
+
+      <div style="padding: 0.125rem; text-align: center;">
+
+        <p style="font-size: 0.625rem; color: #718096;">Transaction date: ${transaction_date}</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

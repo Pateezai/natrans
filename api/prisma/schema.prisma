@@ -1,0 +1,92 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// schema.prisma
+
+model Location {
+  id    Int    @id @default(autoincrement())
+  name  String
+  label String
+}
+
+model Route {
+  id             Int      @id @default(autoincrement())
+  date           DateTime
+  duration       String
+  fare           Int
+  start_location String
+  end_location   String
+  periods        Period[]
+}
+
+model Period {
+  id             Int      @id @default(autoincrement())
+  route          Route    @relation(fields: [routeId], references: [id])
+  routeId        Int
+  desc           String
+  start_time     String
+  available_seat Int
+  reserved_seat  Int
+  end_time       String
+  Ticket         Ticket[]
+  // sequences  Sequence[] // Define the relationship to Sequence model
+
+  @@index([routeId], name: "routeId")
+}
+
+model Payment {
+  id                 Int     @id @default(autoincrement())
+  payment_method     String
+  transaction_id     String
+  transaction_date   String
+  transaction_name   String
+  transaction_status String
+  name_oncard        String?
+  amount             Int
+  net                Int
+  fee                Int
+  fee_vat            Int
+  fee_rate           Float
+  vat_rate           Float
+  currency           String
+  country            String
+  card_brand         String?
+  bank               String
+  // ticket           Ticket  @relation("TicketToPayment", fields: [ticketId], references: [id])
+  // ticketId         String  @unique
+  ticket             Ticket? @relation("PaymentToTicket")
+}
+
+model Ticket {
+  id               Int     @id @default(autoincrement())
+  ref_id           String  @unique
+  from             String
+  to               String
+  duration         String
+  identnumber      String
+  fare             Int
+  note             String
+  p_name           String
+  email            String
+  phone            String
+  depart_date      String
+  start_time       String
+  end_time         String
+  seat             Int
+  transaction_date String
+  qr_code          String
+  period           Period  @relation(fields: [periodId], references: [id])
+  periodId         Int
+  // payment          Payment? @relation("TicketToPayment")
+  payment          Payment @relation("PaymentToTicket", fields: [paymentId], references: [id])
+  paymentId        Int     @unique
+}
