@@ -7,7 +7,7 @@ const Navbar = () => {
 
       <div className="flex text-white gap-2 items-end">
         <Link to='../'>
-          <span className='text-2xl font-semibold text-slate-50 p-1'>Na-trans.</span>
+          <span className='text-2xl font-semibold text-slate-50 p-1'>Natrans</span>
         </Link>
         <div className="menu hidden">
           <ul className='flex items-center gap-2 p-1'>

@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = env("AWS_RDS_DB_URL")
 }
 
 // schema.prisma
