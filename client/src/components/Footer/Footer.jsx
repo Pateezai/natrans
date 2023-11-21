@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     <div className='min-w-[270px] w-full bg-slate-300 flex flex-col items-center'>
       
-      <div className=" m-auto p-4 grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <div className=" m-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         <div className="footer__col">
           <h3 className='mb-4 text-xl font-semibold text-slate-900'>Na-trans</h3>
           <p className='mb-4 text-slate-400 cursor-pointer transition-all duration-75 hover:text-slate-900'>

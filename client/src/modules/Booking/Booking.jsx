@@ -132,13 +132,13 @@ const Booking = () => {
   return (
     <>
       <LandingBanner />
-      <div className="min-w-[270px] max-w-[1200px] m-auto sm:p-2 p-4 flex flex-col gap-2">
+      <div className="min-w-[270px] max-w-[1200px] m-auto p-2 flex flex-col gap-2 md:p-4 lg:p-4 xl:p-4 ">
         <div className="booking flex flex-col p-2  gap-4 bg-slate-200 rounded shadow-md">
-          <div className="flex sm:flex-col gap-1">
+          <div className="flex flex-col gap-1 md:flex-row lg:flex-row xl:flex-row ">
             <form
               action=""
               id="routeform"
-              className="m-auto grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full gap-1"
+              className="m-auto grid grid-cols-1 w-full gap-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 "
               onSubmit={formik.handleSubmit}
             >
               <div className="flex flex-col p-2">
@@ -243,7 +243,7 @@ const Booking = () => {
               </div>
             </form>
             <button
-              className="w-24 sm:w-full sm:py-2 rounded font-bold text-white bg-sky-300"
+              className="w-full py-2 rounded font-bold text-white bg-sky-300 md:w-24 md:py-0 lg:w-24 lg:py-0 xl:w-24 xl:py-0"
               type="submit"
               form="routeform"
             >
@@ -260,8 +260,8 @@ const Booking = () => {
             {isLoading? 
                 (
                 <>
-                <Skeleton className='h-32 sm:h-56'/>
-                <Skeleton className='h-32 sm:h-56'/>
+                <Skeleton className='h-56 md:h-32 lg:h-32 xl:h-32 '/>
+                <Skeleton className='h-56 md:h-32 lg:h-32 xl:h-32 '/>
                 </>
                 ):(
                 <>
@@ -318,11 +318,11 @@ const Booking = () => {
 
                   return periods.map((period, index) => (
                     <div
-                      className="flex sm:flex-col bg-slate-100 p-4 transition-all duration-150 shadow-md rounded peer-checked/ticket:hidden"
+                      className="flex flex-col bg-slate-100 p-4 transition-all duration-150 shadow-md rounded peer-checked/ticket:hidden md:flex-row lg:flex-row xl:flex-row "
                       key={index}
                     >
-                      <div className="detail w-3/4 sm:w-full flex justify-between">
-                        <div className="from w-3/4 sm:w-full flex flex-col items-center justify-center">
+                      <div className="detail flex flex-col w-full  justify-between md:w-3/4 md:flex-row lg:w-3/4 lg:flex-row xl:w-3/4 xl:flex-row ">
+                        <div className="from w-full flex flex-col items-center justify-center md:w-3/4 lg:w-3/4 xl:w-3/4 ">
                           <span className="flex items-center gap-2">
                             <span className="flex flex-col items-center justify-center">
                               <MdPersonPinCircle size={30} />
@@ -344,14 +344,14 @@ const Booking = () => {
                         <div className="icon flex flex-col items-center justify-center">
                           <PiArrowFatRightFill
                             size={30}
-                            className="sm:hidden"
+                            className="hidden md:block lg:block xl:block"
                           />
                           <PiArrowFatDownFill
                             size={30}
-                            className="hidden sm:block"
+                            className="block md:hidden lg:hidden xl:hidden"
                           />
                         </div>
-                        <div className="to w-3/4 sm:w-full flex flex-col items-center justify-center">
+                        <div className="to w-full flex flex-col items-center justify-center md:w-3/4 lg:w-3/4 xl:w-3/4 ">
                           <span className="flex items-center gap-2">
                             <span className="flex flex-col items-center justify-center">
                               <MdLocationPin size={30} />
@@ -371,15 +371,15 @@ const Booking = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="button w-1/4 sm:w-full flex flex-col items-center justify-center gap-1">
-                        <p>{period.available_seat - period.reserved_seat} Available</p>
+                      <div className="button w-full border-t-2 flex flex-col items-center justify-center gap-1 md:w-1/4 md:border-t-0 lg:w-1/4 lg:border-t-0 xl:w-1/4 xl:border-t-0  ">
+                        <p className="">{period.available_seat - period.reserved_seat} Available</p>
                         <button
                           onClick={() => handleOnClick(route, period, index)}
-                          className="px-4 py-1 rounded-full sm:rounded bg-sky-300 text-white sm:order-3 sm:w-full sm:p-2 font-semibold"
+                          className="px-4 py-1 rounded bg-sky-300 text-white order-1 w-full p-2 md:w-fit md:order-none md:rounded-full lg:order-none lg:w-fit lg:rounded-full xl:w-fit xl:order-none xl:rounded-full   font-semibold"
                         >
                           {route.fare * passenger}฿
                         </button>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 order-2 md:order-none lg:order-none xl:order-none">
                           <span className="flex items-center gap-1">
                             {passenger} <BsFillPersonFill size={18} />,
                           </span>

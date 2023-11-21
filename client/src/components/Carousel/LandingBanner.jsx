@@ -23,7 +23,7 @@ const LandingBanner = () => {
   ];
   return (
     <>
-     <Carousel infiniteLoop showThumbs={false} autoPlay>
+     <Carousel infiniteLoop showThumbs={false} autoPlay className=' min-w-[270px]'>
      {slideImages.map((slideImage, index) => (
         <div key={index} className='flex items-center justify-center h-[400px]'>
           <img src={slideImage.url} alt={slideImage.caption} className='h-[700px]'/>

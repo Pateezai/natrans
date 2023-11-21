@@ -6,10 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
-    screens: {
-      'md' : { 'raw': '(width < 900px)'},
-      'sm' : { 'raw': '(width < 600px)'},
-    }
+    // screens: {
+    //   'md' : { 'raw': '(width < 900px)'},
+    //   'sm' : { 'raw': '(width < 600px)'},
+    // }
   },
   plugins: [],
 }

@@ -3,7 +3,7 @@ import {FaListUl} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
-    <div className='min-w-[270px] w-full bg-slate-900 py-2 sm:px-2 px-8 flex items-center justify-between'>
+    <div className='min-w-[270px] w-full bg-slate-900 py-2 px-2 md:px-8 lg:px-8 xl:px-8 flex items-center justify-between'>
 
       <div className="flex text-white gap-2 items-end">
         <Link to='../'>

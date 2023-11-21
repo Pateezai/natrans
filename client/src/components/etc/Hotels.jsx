@@ -12,7 +12,7 @@ const Hotels = () => {
     <div className='max-w-[1200px] m-auto py-20'>
     <h2 className="text-4xl font-semibold text-slate-900 text-center">Samui's Popular Hotels</h2>
 
-    <div className="mt-16 grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 ">
+    <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 ">
 
       <div className="overflow-hidden rounded-lg shadow-md ">
         <img src={hotel1} alt="popular hotel" className='w-full flex object-cover'/>

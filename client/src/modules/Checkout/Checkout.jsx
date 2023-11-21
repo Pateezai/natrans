@@ -108,7 +108,7 @@ const Checkout = () => {
   return (
     <>
     <div className="bg-slate-300 text-slate-400 py-2 px-8 flex items-center gap-1 sele font-light text-sm"> <Link to={'../'} className='hover:text-slate-500 hover:underline'>Home</Link>  <p className='select-none'>/</p><Link to={'../checkout'} className='text-md underline text-slate-500'>Route Detail</Link></div>
-    <div className='min-w-[270px] max-w-[1200px] min-h-screen m-auto sm:px-2 sm:py-10 px-4 py-20 flex flex-col gap-4'>
+    <div className='min-w-[270px] max-w-[1200px] min-h-screen m-auto flex flex-col gap-4 px-2 py-10 md:px-4 md:py-20 lg:px-4 lg:py-20 xl:px-4 xl:py-20'>
         {/* <h1 className='text-xl font-semibold text-center'>Your Selected Route Detail</h1> */}
 
 
@@ -121,9 +121,9 @@ const Checkout = () => {
             <label className='cursor-pointer' htmlFor='ticket'>
                 <BsDashLg  className={`text-white transition-all duration-150 absolute top-3 right-4`} size={20}/> 
             </label>
-            <div className="flex sm:flex-col bg-slate-100 p-4 transition-all duration-150 peer-checked/ticket:hidden" >
-                <div className="detail w-3/4 sm:w-full sm:flex-col flex justify-between">
-                    <div className="from w-3/4 sm:w-full flex flex-col items-center justify-center">
+            <div className="flex flex-col bg-slate-100 p-4 transition-all duration-150 peer-checked/ticket:hidden md:flex-row lg:flex-row xl:flex-row" >
+                <div className="detail w-full flex-col flex justify-between md:w-3/4 md:flex-row lg:w-3/4 lg:flex-row xl:w-3/4 xl:flex-row">
+                    <div className="from w-full flex flex-col items-center justify-center md:w-3/4 lg:w-3/4 xl:w-3/4">
                         <span className='flex items-center gap-2'>
                             <span className='flex flex-col items-center justify-center'>
                                 <MdPersonPinCircle size={30}/>
@@ -141,10 +141,10 @@ const Checkout = () => {
                         </p>
                     </div>
                     <div className="icon flex flex-col items-center justify-center">
-                        <PiArrowFatRightFill size={30} className='sm:hidden'/>
-                        <PiArrowFatDownFill size={30} className='hidden sm:block'/>
+                        <PiArrowFatRightFill size={30} className='hidden md:block lg:block xl:block'/>
+                        <PiArrowFatDownFill size={30} className='block md:hidden lg:hidden xl:hidden'/>
                     </div>
-                    <div className="to w-3/4 sm:w-full flex flex-col items-center justify-center">
+                    <div className="to w-full flex flex-col items-center justify-center md:w-3/4 lg:w-3/4 xl:w-3/4">
                         <span className='flex items-center gap-2'>
                             <span className='flex flex-col items-center justify-center'>
                                 <MdLocationPin size={30}/>
@@ -162,7 +162,7 @@ const Checkout = () => {
                         </p>
                     </div>
                 </div>
-                <div className="button w-1/4 sm:w-full flex flex-col items-center justify-center">
+                <div className="button w-full flex flex-col items-center justify-center md:w-1/4 lg:w-1/4 xl:w-1/4">
                     <p className='flex items-center'> 
                     {routeDetail.passenger}  Passenger
                     
@@ -194,16 +194,16 @@ const Checkout = () => {
                 <label className='cursor-pointer' htmlFor='bus'>
                     <BsDashLg  className={`text-white transition-all duration-150 absolute top-3 right-4`} size={20}/> 
                 </label>
-                <div className="  flex sm:flex-col transition-all duration-150 bg-slate-100 peer-checked/bus:hidden">
+                <div className="flex flex-col transition-all duration-150 bg-slate-100 peer-checked/bus:hidden md:flex-row lg:flex-row xl:flex-row">
 
-                    <div className="w-1/3 sm:w-full flex items-center justify-center p-2">
+                    <div className="w-full flex items-center justify-center p-2 md:w-1/3 lg:w-1/3 xl:w-1/3">
                         <BusDetail/>
                         {/* <div className="w-72 h-36 overflow-hidden flex items-center justify-center">
                             <img src={inside} alt="" className='object-contain scale-75'/>
                         </div> */}
                     </div>
 
-                    <div className="w-3/4 sm:w-full p-2 flex flex-col justify-between">
+                    <div className="w-full p-2 flex flex-col justify-between md:w-3/4 lg:w-3/4 xl:w-3/4">
                         <div className="flex flex-wrap items-center justify-start gap-4 p-2">
                         <div className="flex items-center gap-1 ">
                             <h1 className='font-semibold  text-end'>From:</h1>
@@ -386,7 +386,7 @@ const Checkout = () => {
             <label className='cursor-pointer' htmlFor='forminfo'>
                 <BsDashLg  className={`text-white transition-all duration-150 absolute top-3 right-4`} size={20}/> 
             </label>
-            <form id='psginfo' className="form grid grid-cols-2 sm:grid-cols-1 gap-2 p-4 bg-slate-100 transition-all duration-150 peer-checked/forminfo:hidden" onSubmit={formik.handleSubmit}>
+            <form id='psginfo' className="form grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 p-4 bg-slate-100 transition-all duration-150 peer-checked/forminfo:hidden" onSubmit={formik.handleSubmit}>
                     
                     <div className="flex flex-col my-1">
                         <span className='font-semibold'>First Name</span>
@@ -436,7 +436,7 @@ const Checkout = () => {
                         <span className={formik.errors.phone ? `text-pink-700`:`hidden`}>Invalid</span>
 
                     </div>
-                    <div className="flex flex-col my-1 col-span-2 sm:col-span-1">
+                    <div className="flex flex-col my-1 col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2">
                         <span className='font-semibold'>Note</span>
                         <textarea type="textarea" className='border rounded-sm border-opacity-50 border-slate-800 px-3 py-1 text-lg font-light outline-none focus:border-opacity-100 focus:border-pink-700/50 placeholder:text-md'
                         placeholder='Please note your drop point if any, NO ADDITIONAL CHARGED' {...formik.getFieldProps('note')}
@@ -445,7 +445,7 @@ const Checkout = () => {
 
                     </div>
 
-                    <div className="col-span-2 sm:col-span-1 my-1 gap-1 flex flex-wrap justify-center p-2">
+                    <div className="col-span-1 my-1 gap-1 flex flex-wrap justify-center p-2 md:col-span-2 lg:col-span-2 xl:col-span-2">
                             <input 
                             type="checkbox" name="accept" id="accept" {...formik.getFieldProps('accept')}/>
                             I accept 
@@ -457,7 +457,7 @@ const Checkout = () => {
 
 
                     </div>
-                    <div className="col-span-2 sm:col-span-1 my-1 p-4 flex items-center justify-center">
+                    <div className="col-span-1 my-1 p-4 flex items-center justify-center md:col-span-2 lg:col-span-2 xl:col-span-2">
                         <button 
                         disabled={
                             formik.values.identnumber && formik.values.fname && formik.values.lname && formik.values.email && formik.values.phone && formik.values.accept ?
@@ -504,7 +504,7 @@ const Checkout = () => {
                     </div>
                 </div>
                 <h1 className='text-lg font-medium bg-slate-200 pl-8 p-2'>Payment Method </h1>
-                <div className="flex sm:flex-col gap-2 w-full items-center justify-center p-4 bg-slate-100 ">
+                <div className="flex flex-col gap-2 w-full items-center justify-center p-4 bg-slate-100 md:flex-row lg:flex-row xl:flex-row">
                     <CreditCard 
                     CheckoutDetail={CheckoutDetail}
                     routeDetail={routeDetail}

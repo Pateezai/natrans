@@ -182,7 +182,7 @@ const CreditCard = ({CheckoutDetail, routeDetail}) => {
         </>
     ):(null)}
 
-    <div className='w-1/3 sm:w-full'>
+    <div className='w-full md:w-1/3 lg:w-1/3 xl:w-1/3'>
         <Script
         url="https://cdn.omise.co/omise.js"
         onLoad={handleLoadScript}

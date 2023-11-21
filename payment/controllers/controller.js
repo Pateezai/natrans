@@ -185,7 +185,7 @@ export async function checkoutMobileBanking(req, res, next){
             amount,
             'source':     token,
             'currency':   'thb',
-            'return_uri': 'http://127.0.0.1:5173/ticket',
+            'return_uri': 'http://natrans.site/ticket',
           });
         // console.log('Mobile ->', charges)
         return res.send({
